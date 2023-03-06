@@ -18,7 +18,6 @@ public class RecursiveFunctions {
         return base * pow(base, power-1);
     }
 
-    // Fibonacci
     // precondition: n is nonnegative
     public static int fibonacci(int n) {
         // return the nth fibonacci number
@@ -49,11 +48,8 @@ public class RecursiveFunctions {
         return nextIsDouble(data, startIndex+1);
     }
 
-
     // precondition: n is a positive integer
     public static String getBinary(int n) {
-        //turns an integer into its binary representation, in string form
-
         if(n == 0) {
             return "";
         }
@@ -64,15 +60,7 @@ public class RecursiveFunctions {
         }
     }
 
-
-
-
-
-
-
-
-    // binary search 
-    // returns int of index if found
+    // returns the index if found
     // returns -1 if not found
     // binary search refresher: https://www.youtube.com/watch?v=KXJSjte_OAI
     public static int binarySearch(int[] array, int start, int end, int searchValue) {
@@ -91,18 +79,12 @@ public class RecursiveFunctions {
         }
     }
 
-
-
-
-
     public static boolean canFlowOffMap(int[][] map, int r, int c) {
 
         if(r == 0 || c == 0 || r == map.length-1 || c == map[0].length-1) {
             return true;
         }
 
-
-        
         int currVal = map[r][c];
 
         if(currVal > map[r-1][c]) {
@@ -130,15 +112,5 @@ public class RecursiveFunctions {
         }
         
         return false;
-
-        // if we at the edge
-            // return true
-        // for each neighbor
-            // if neighbor is less than us
-            // recursion on neighbor
-            // if recursion true
-                // return true
-        // return false
-        //return false;
     }
 }
