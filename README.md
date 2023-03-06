@@ -10,47 +10,59 @@ Use the test cases to figure out the specifics of the headers/usage of each meth
 
 ### Factorial
 
-Takes in an integer, and returns the factorial of that integer.
+Takes in an integer, and returns a `double` that is the factorial of that integer.
+
 Precondition: the argument is non-negative
 
 ### Pow
 
-Takes in a `double base` and an `int power`. Returns `base` raised to the `power`.
+Takes in a `double base` and an `int power`. Returns a `double` that is `base` raised to the `power`.
+
 Precondition: `power` is a positive integer.
 
 ### Fibonacci
 
-Takes in an integer `n`, and returns the **nth** term in the Fibonacci sequence.
+Takes in an integer `n`, and returns the *nth* term in the Fibonacci sequence.
 For the sake of this project, the 0th term is `0` and the 1st term is `1`.
+
 Precondition: `n` is a non-negative integer.
 
 ### isPalindrome
 
 Takes in a string, and returns true if the string is a palindrome (case sensitive), and false otherwise.
+
 Yes, we've done this before, but please do it recursively this time! :)
 
 ### nextIsDouble
 
 Given an array, returns an `int` counting how many pairs of adjacent integers where the right integer is double the left one. For example: [3,6,10,20,40] would return `3` because 3x2 = 6, 10x2 = 20, and 20x2 = 40.
+
 The `int` parameter is used for recursion, and represents where in the array the algorithm is currently at.
+
 Precondition: the given array has at least 1 element.
 
 ### getBinary
 
 Takes in an `int`, and returns a `String` of its binary representation.
+
 Precondition: the argument is a positive integer
 
 ### binarySearch
 
 Takes in an array and a value to search for. If the value is in the array, it returns the index of the value. Otherwise, return `-1`.
+
 If you need a refresher on how binary search works, you can go here: <https://www.youtube.com/watch?v=KXJSjte_OAI>
+
 The first two parameters are the array and the value to search for.
+
 The next two parameters represent the bounds of the area to search.
+
 Precondition: the given array is sorted, and has no repeat elements.
 
 ### canFlowOffMap
 
 `public static boolean canFlowOffMap(int[][] map, int row, int col)`
+
 
 In this problem, an area of land is represented as a two dimensional `int` array. The array element represents the elevation of that point on land. The higher the elevation, the higher the number. A flat plain at an elevation of 100 feet above sea level look like this:
 
