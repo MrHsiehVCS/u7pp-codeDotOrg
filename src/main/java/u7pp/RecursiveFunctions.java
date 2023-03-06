@@ -63,7 +63,7 @@ public class RecursiveFunctions {
     // returns the index if found
     // returns -1 if not found
     // binary search refresher: https://www.youtube.com/watch?v=KXJSjte_OAI
-    public static int binarySearch(int[] array, int start, int end, int searchValue) {
+    public static int binarySearch(int[] array, int searchValue, int start, int end) {
 
         if(start > end) {
             return -1;
@@ -73,9 +73,9 @@ public class RecursiveFunctions {
             return mid;
         }
         if(searchValue > array[mid]) {
-            return binarySearch(array, mid+1, end, searchValue);
+            return binarySearch(array, searchValue, mid+1, end);
         } else {
-            return binarySearch(array, start,mid-1, searchValue);
+            return binarySearch(array, searchValue, start,mid-1);
         }
     }
 

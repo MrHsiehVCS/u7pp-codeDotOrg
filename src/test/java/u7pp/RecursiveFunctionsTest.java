@@ -362,88 +362,88 @@ public class RecursiveFunctionsTest {
     @Test
     public void binarySearch_OneElem_IsFound_returnsCorrect() {
         int[] data = {0};
-        assertEquals(0, RecursiveFunctions.binarySearch(data, 0, data.length-1, 0));
+        assertEquals(0, RecursiveFunctions.binarySearch(data, 0, 0, data.length-1));
     }
 
     @Test
     public void binarySearch_OneElem_IsNotFound_returnsCorrect() {
         int[] data = {10};
-        assertEquals(-1, RecursiveFunctions.binarySearch(data, 0, data.length-1, 0));
+        assertEquals(-1, RecursiveFunctions.binarySearch(data, 0, 0, data.length-1));
     }
 
     @Test
     public void binarySearch_ThreeElem_IsFoundInMiddle_returnsCorrect() {
         int[] data = {-10,0,10};
-        assertEquals(1, RecursiveFunctions.binarySearch(data, 0, data.length-1, 0));
+        assertEquals(1, RecursiveFunctions.binarySearch(data, 0, 0, data.length-1));
     }
 
     @Test
     public void binarySearch_ThreeElem_IsFoundInFront_returnsCorrect() {
         int[] data = {0,10,20};
-        assertEquals(0, RecursiveFunctions.binarySearch(data, 0, data.length-1, 0));
+        assertEquals(0, RecursiveFunctions.binarySearch(data, 0, 0, data.length-1));
     }
 
     @Test
     public void binarySearch_ThreeElem_IsFoundInBack_returnsCorrect() {
         int[] data = {-20,-10,0};
-        assertEquals(2, RecursiveFunctions.binarySearch(data, 0, data.length-1, 0));
+        assertEquals(2, RecursiveFunctions.binarySearch(data, 0, 0, data.length-1));
     }
 
     @Test
     public void binarySearch_ThreeElem_IsNotFound_returnsCorrect() {
         int[] data = {-20,-10,10};
-        assertEquals(-1, RecursiveFunctions.binarySearch(data, 0, data.length-1, 0));
+        assertEquals(-1, RecursiveFunctions.binarySearch(data, 0, 0, data.length-1));
     }
 
     @Test
     public void binarySearch_SevenElemIsFound_returnsCorrect() {
         int[] data = {10,20,30,40,50,60,70};
-        assertEquals(0, RecursiveFunctions.binarySearch(data, 0, data.length-1, 10));
-        assertEquals(1, RecursiveFunctions.binarySearch(data, 0, data.length-1, 20));
-        assertEquals(2, RecursiveFunctions.binarySearch(data, 0, data.length-1, 30));
-        assertEquals(3, RecursiveFunctions.binarySearch(data, 0, data.length-1, 40));
-        assertEquals(4, RecursiveFunctions.binarySearch(data, 0, data.length-1, 50));
-        assertEquals(5, RecursiveFunctions.binarySearch(data, 0, data.length-1, 60));
-        assertEquals(6, RecursiveFunctions.binarySearch(data, 0, data.length-1, 70));
+        assertEquals(0, RecursiveFunctions.binarySearch(data, 10, 0, data.length-1));
+        assertEquals(1, RecursiveFunctions.binarySearch(data, 20, 0, data.length-1));
+        assertEquals(2, RecursiveFunctions.binarySearch(data, 30, 0, data.length-1));
+        assertEquals(3, RecursiveFunctions.binarySearch(data, 40, 0, data.length-1));
+        assertEquals(4, RecursiveFunctions.binarySearch(data, 50, 0, data.length-1));
+        assertEquals(5, RecursiveFunctions.binarySearch(data, 60, 0, data.length-1));
+        assertEquals(6, RecursiveFunctions.binarySearch(data, 70, 0, data.length-1));
     }
 
     @Test
     public void binarySearch_SevenElemNotFound_returnsCorrect() {
         int[] data = {10,20,30,40,50,60,70};
-        assertEquals(-1, RecursiveFunctions.binarySearch(data, 0, data.length-1, 5));
-        assertEquals(-1, RecursiveFunctions.binarySearch(data, 0, data.length-1, 15));
-        assertEquals(-1, RecursiveFunctions.binarySearch(data, 0, data.length-1, 25));
-        assertEquals(-1, RecursiveFunctions.binarySearch(data, 0, data.length-1, 35));
-        assertEquals(-1, RecursiveFunctions.binarySearch(data, 0, data.length-1, 45));
-        assertEquals(-1, RecursiveFunctions.binarySearch(data, 0, data.length-1, 55));
-        assertEquals(-1, RecursiveFunctions.binarySearch(data, 0, data.length-1, 65));
-        assertEquals(-1, RecursiveFunctions.binarySearch(data, 0, data.length-1, 75));
+        assertEquals(-1, RecursiveFunctions.binarySearch(data, 5, 0, data.length-1));
+        assertEquals(-1, RecursiveFunctions.binarySearch(data, 15, 0, data.length-1));
+        assertEquals(-1, RecursiveFunctions.binarySearch(data, 25, 0, data.length-1));
+        assertEquals(-1, RecursiveFunctions.binarySearch(data, 35, 0, data.length-1));
+        assertEquals(-1, RecursiveFunctions.binarySearch(data, 45, 0, data.length-1));
+        assertEquals(-1, RecursiveFunctions.binarySearch(data, 55, 0, data.length-1));
+        assertEquals(-1, RecursiveFunctions.binarySearch(data, 65, 0, data.length-1));
+        assertEquals(-1, RecursiveFunctions.binarySearch(data, 75, 0, data.length-1));
     }
 
     @Test
     public void binarySearch_TwoElem_returnsCorrect() {
         int[] data = {10,20};
-        assertEquals(0, RecursiveFunctions.binarySearch(data, 0, data.length-1, 10));
-        assertEquals(1, RecursiveFunctions.binarySearch(data, 0, data.length-1, 20));
-        assertEquals(-1, RecursiveFunctions.binarySearch(data, 0, data.length-1, 5));
-        assertEquals(-1, RecursiveFunctions.binarySearch(data, 0, data.length-1, 15));
-        assertEquals(-1, RecursiveFunctions.binarySearch(data, 0, data.length-1, 25));
+        assertEquals(0, RecursiveFunctions.binarySearch(data, 10, 0, data.length-1));
+        assertEquals(1, RecursiveFunctions.binarySearch(data, 20, 0, data.length-1));
+        assertEquals(-1, RecursiveFunctions.binarySearch(data, 5, 0, data.length-1));
+        assertEquals(-1, RecursiveFunctions.binarySearch(data, 15, 0, data.length-1));
+        assertEquals(-1, RecursiveFunctions.binarySearch(data, 25, 0, data.length-1));
     }
 
 
     @Test
     public void binarySearch_manyElemWhenFound_returnsCorrect() {
         int[] data = {10,20,30,40,50,60,70,80,90,110,120,130,140,150,160,170,180,190,200,210,220,230,240,250,260,270,280,290,300};
-        assertEquals(0, RecursiveFunctions.binarySearch(data, 0, data.length-1, 10));
-        assertEquals(1, RecursiveFunctions.binarySearch(data, 0, data.length-1, 20));
-        assertEquals(2, RecursiveFunctions.binarySearch(data, 0, data.length-1, 30));
-        assertEquals(4, RecursiveFunctions.binarySearch(data, 0, data.length-1, 50));
-        assertEquals(7, RecursiveFunctions.binarySearch(data, 0, data.length-1, 80));
-        assertEquals(15, RecursiveFunctions.binarySearch(data, 0, data.length-1, 170));
-        assertEquals(16, RecursiveFunctions.binarySearch(data, 0, data.length-1, 180));
-        assertEquals(17, RecursiveFunctions.binarySearch(data, 0, data.length-1, 190));
-        assertEquals(19, RecursiveFunctions.binarySearch(data, 0, data.length-1, 210));
-        assertEquals(28, RecursiveFunctions.binarySearch(data, 0, data.length-1, 300));
+        assertEquals(0, RecursiveFunctions.binarySearch(data, 10, 0, data.length-1));
+        assertEquals(1, RecursiveFunctions.binarySearch(data, 20, 0, data.length-1));
+        assertEquals(2, RecursiveFunctions.binarySearch(data, 30, 0, data.length-1));
+        assertEquals(4, RecursiveFunctions.binarySearch(data, 50, 0, data.length-1));
+        assertEquals(7, RecursiveFunctions.binarySearch(data, 80, 0, data.length-1));
+        assertEquals(15, RecursiveFunctions.binarySearch(data, 170, 0, data.length-1));
+        assertEquals(16, RecursiveFunctions.binarySearch(data, 180, 0, data.length-1));
+        assertEquals(17, RecursiveFunctions.binarySearch(data, 190, 0, data.length-1));
+        assertEquals(19, RecursiveFunctions.binarySearch(data, 210, 0, data.length-1));
+        assertEquals(28, RecursiveFunctions.binarySearch(data, 300, 0, data.length-1));
     }
 
 
@@ -451,17 +451,17 @@ public class RecursiveFunctionsTest {
     @Test
     public void binarySearch_manyElemWhenNotFound_returnsCorrect() {
         int[] data = {10,20,30,40,50,60,70,80,90,110,120,130,140,150,160,170,180,190,200,210,220,230,240,250,260,270,280,290,300};
-        assertEquals(-1, RecursiveFunctions.binarySearch(data, 0, data.length-1, 1));
-        assertEquals(-1, RecursiveFunctions.binarySearch(data, 0, data.length-1, 11));
-        assertEquals(-1, RecursiveFunctions.binarySearch(data, 0, data.length-1, 21));
-        assertEquals(-1, RecursiveFunctions.binarySearch(data, 0, data.length-1, 31));
-        assertEquals(-1, RecursiveFunctions.binarySearch(data, 0, data.length-1, 51));
-        assertEquals(-1, RecursiveFunctions.binarySearch(data, 0, data.length-1, 81));
-        assertEquals(-1, RecursiveFunctions.binarySearch(data, 0, data.length-1, 171));
-        assertEquals(-1, RecursiveFunctions.binarySearch(data, 0, data.length-1, 181));
-        assertEquals(-1, RecursiveFunctions.binarySearch(data, 0, data.length-1, 191));
-        assertEquals(-1, RecursiveFunctions.binarySearch(data, 0, data.length-1, 211));
-        assertEquals(-1, RecursiveFunctions.binarySearch(data, 0, data.length-1, 301));
+        assertEquals(-1, RecursiveFunctions.binarySearch(data, 1, 0, data.length-1));
+        assertEquals(-1, RecursiveFunctions.binarySearch(data, 11, 0, data.length-1));
+        assertEquals(-1, RecursiveFunctions.binarySearch(data, 21, 0, data.length-1));
+        assertEquals(-1, RecursiveFunctions.binarySearch(data, 31, 0, data.length-1));
+        assertEquals(-1, RecursiveFunctions.binarySearch(data, 51, 0, data.length-1));
+        assertEquals(-1, RecursiveFunctions.binarySearch(data, 81, 0, data.length-1));
+        assertEquals(-1, RecursiveFunctions.binarySearch(data, 171, 0, data.length-1));
+        assertEquals(-1, RecursiveFunctions.binarySearch(data, 181, 0, data.length-1));
+        assertEquals(-1, RecursiveFunctions.binarySearch(data, 191, 0, data.length-1));
+        assertEquals(-1, RecursiveFunctions.binarySearch(data, 211, 0, data.length-1));
+        assertEquals(-1, RecursiveFunctions.binarySearch(data, 301, 0, data.length-1));
     }
 
 
