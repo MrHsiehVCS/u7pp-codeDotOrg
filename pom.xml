@@ -6,11 +6,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>csa</groupId>
-  <artifactId>u7pp</artifactId>
+  <artifactId>u10pp</artifactId>
   <version>1.0</version>
 
-  <name>u7pp</name>
-  <url>https://github.com/MrHsiehVCS/u7pp</url>
+  <name>u10pp</name>
+  <url>https://github.com/MrHsiehVCS/u10pp</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
