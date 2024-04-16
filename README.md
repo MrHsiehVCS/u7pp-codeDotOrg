@@ -96,15 +96,20 @@ The drop of water can move to one of the four adjacent cells (above, below, left
 
 Water in any cell on the edge of the map can flow off the map.
 
-In the first example, the plain, the water in any cell that is not on the border of the array cannot flow to any other cell, since all adjacent cells have the same elevation. Water on any of the border cells could flow off the map. In the second example, if a drop of water started at the cell in row 2, column 2 (the 96) it could eventually flow off the map by following the river, because each segment of the river is one foot lower than the previous.
+`canFlowOff` returns true if a drop of water starting at the location specified by row, column can reach the edge of the map, false otherwise.
 
-Recall that water on the border can also flow off. In the second example, if water started at the cell in row 4, column 0 (a 200), then it can flow off the map. The water cannot flow to any adjacent cell, but that doesn't matter because the cell is on the border.
+Examples: 
+
+If we start in the cell at the 2nd row, and the 4th column (on the 200 height plateau), the water in any cell is not on the border of the array, and cannot flow to any other cell, since all adjacent cells have the same elevation. Water on any of the border cells could flow off the map. 
+
+If a drop of water started at the cell in row 2, column 2 (the 96) it could eventually flow off the map by following the river, because each segment of the river is one foot lower than the previous.
+
+If water started at the cell in row 4, column 0 (a 200), then it can flow off the map. The water cannot flow to any adjacent cell, but that doesn't matter because the cell is on the border.
 
 If the starting cell is row 4, column 1 (the 188), the water can flow off the map. The water cannot flow west or south because those cells have an elevation of 200. However, the water can flow north or east to the cells in the river. The water falls off the bank into the river, and then off the map via the river.
 
-Finally, the cell at row 6, column 1 (the 8) cannot flow off the map. It tries north and reaches a dead-end. It cannot move east or west. It tries south, but reaches a dead-end.
+The cell at row 6, column 1 (the 8) cannot flow off the map. It tries north and reaches a dead-end. It cannot move east or west. It tries south, but eventually reaches a dead-end, where the 5 is. 
 
-`canFlowOff` returns true if a drop of water starting at the location specified by row, column can reach the edge of the map, false otherwise.
 
 ## Grading Breakdown
 
